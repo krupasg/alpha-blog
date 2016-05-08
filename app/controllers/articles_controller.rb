@@ -7,6 +7,21 @@ class ArticlesController < ApplicationController
     @articles = Article.paginate(page: params[:page], per_page: 5)
   end
   
+  def search_article
+    puts params[:article_text]
+    #@articles = Article.find_by_title('India')
+    @articles = Article.find_by_title('India')
+    
+    render 'show'
+     puts %Q{ Values passed from the screen for the article name is #{params[:article_text]}}
+   # @articles = Article.find_by_name(params[:articlename])
+    #render 'show'
+  end
+  
+  
+  
+  
+  
   def new
     @article = Article.new
   end

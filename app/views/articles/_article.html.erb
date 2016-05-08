@@ -1,4 +1,14 @@
-<ul><%= link_to "Create New Article", new_article_path, class: "btn btn-xs btn-primary" %></ul>
+<%= link_to "Create this article", new_article_path , class: "btn btn-xs btn-primary" %>
+
+
+
+<form id="my_form" action="search_article_path">
+   <label for="title">Title: </label>
+    <input type="text" name="article_text" id="title"> 
+</form>
+
+
+  
 <% obj.each do |article| %>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
